@@ -1,0 +1,10 @@
+
+services:
+  my-service:
+    image: grpc_1:latest
+    ports:
+      - "9999:9999"
+    volumes:
+      - ./server:/server
+    working_dir: /server/build
+    command: ["./server"]
